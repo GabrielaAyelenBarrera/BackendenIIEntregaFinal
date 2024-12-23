@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body>
+    <h1>Lista </h1>
+    
+    <ul id="productList">
+        {{#each products}}
+        <li>
+            <h2>{{this.name}}</h2>
+            <p>Precio: ${{this.price}}</p>
+            <p>Descripción: {{this.description}}</p>
+            <button data-id="{{this._id}}" class="add-to-cart">Agregar al carrito</button>
+            <button data-id="{{this._id}}" class="view-details">Ver detalles</button>
+        </li>
+        {{/each}}
+    </ul>
+
+    <div id="productModal" style="display: none;">
+        <div>
+            <span id="closeModal" style="cursor: pointer;">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+
+        function showProductDetails(product) {
+            document.getElementById('modalTitle').innerText = product.name;
+            document.getElementById('modalPrice').innerText = `Precio: $${product.price}`;
+            document.getElementById('modalDescription').innerText = `Descripción: ${product.description}`;
+            
+            const modal = document.getElementById('productModal');
+            modal.style.display = 'block';
+        }
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('productModal').style.display = 'none';
+        });
+
+        socket.on('updateProducts', (products) => {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            products.forEach(product => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p>Precio: $${product.price}</p>
+                    <p>Descripción: ${product.description}</p>
+                    <button data-id="${product._id}" class="add-to-cart">Agregar al carrito</button>
+                    <button data-id="${product._id}" class="view-details">Ver detalles</button>
+                `;
+                productList.appendChild(listItem);
+            });
+
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.target.getAttribute('data-id');
+                    const cartId = 'tuCartId';  
+
+                    if (productId && cartId) {
+                        fetch(`/api/carts/${cartId}/product/${productId}`, { method: 'POST' })
+                            .then(response => response.json())
+                            .then(data => alert('Producto agregado al carrito'))
+                            .catch(error => console.error('Error:', error));
+                    } else {
+                        console.error('Faltan productId o cartId');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.target.getAttribute('data-id');
+                    const product = products.find(p => p._id === productId);
+                    if (product) {
+                        showProductDetails(product);
+                    }
+                });
+            });
+        });
+
+        socket.emit('requestProducts');
+    </script>
+</body>
+</html>

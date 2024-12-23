@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos en Tiempo Real</title>
+</head>
+<body>
+    <h1>Lista de Productos en Tiempo Real</h1>
+    
+    <form id="productForm">
+        <input type="text" name="titulo" placeholder="Título" required />
+        <input type="number" name="precio" placeholder="Precio" required />
+        <input type="number" name="stock" placeholder="Stock" required />
+        <input type="text" name="categoria" placeholder="Categoría" required />
+        <input type="text" name="descripcion" placeholder="Descripción" required />  
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <ul id="productList"></ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        socket.on('updateProducts', (products) => {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';  
+
+            products.forEach(product => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <h2>${product.titulo}</h2>
+                    <p>Precio: $${product.precio}</p>
+                    <p>Stock: ${product.stock}</p>
+                    <p>Categoría: ${product.categoria}</p>
+                    <p>Descripción: ${product.descripcion}</p>
+                `;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Eliminar';
+                deleteButton.classList.add('delete-product');  
+                deleteButton.onclick = () => {
+                    socket.emit('deleteProduct', product.id);  
+                };
+
+                listItem.appendChild(deleteButton);
+                productList.appendChild(listItem);
+            });
+        });
+
+        document.getElementById('productForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const titulo = e.target.titulo.value;
+            const precio = e.target.precio.value;
+            const stock = e.target.stock.value;
+            const categoria = e.target.categoria.value;
+            const descripcion = e.target.descripcion.value;  
+
+            socket.emit('addProduct', { titulo, precio, stock, categoria, descripcion });
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
