@@ -2,7 +2,9 @@
 Este proyecto implementa un backend eficiente para un sistema de comercio electrónico, utilizando Node.js y Express. Su propósito es gestionar productos, carritos, usuarios y tickets de forma escalable y fácil de mantener, a través de una arquitectura flexible y modular.
 
 📁 Estructura del Proyecto:
+
 BackendEntregaFinalII/
+
 ├── src/
 │   ├── config/
 │   │   └── passport.js            
