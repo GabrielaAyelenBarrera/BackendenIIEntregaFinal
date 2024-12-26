@@ -6,7 +6,7 @@ Este proyecto implementa un backend eficiente para un sistema de comercio electr
 BackendEntregaFinalII/
 
 ├── src/
-│ 
+
 │   ├── config/
 
 │   │   └── passport.js   
