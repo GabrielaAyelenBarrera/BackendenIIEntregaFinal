@@ -6,59 +6,113 @@ Este proyecto implementa un backend eficiente para un sistema de comercio electr
 BackendEntregaFinalII/
 
 ├── src/
+│ 
 │   ├── config/
-│   │   └── passport.js            
+
+│   │   └── passport.js   
+
 │   ├── controllers/
-│   │   ├── authController.js      
-│   │   ├── cartController.js      
-│   │   ├── productController.js   
-│   │   ├── ticketController.js    
-│   │   └── userController.js      
+
+│   │   ├── authController.js  
+
+│   │   ├── cartController.js 
+
+│   │   ├── productController.js
+
+│   │   ├── ticketController.js  
+
+│   │   └── userController.js
+
 │   ├── daos/
-│   │   ├── cartDAO.js             
-│   │   ├── productDAO.js          
-│   │   ├── ticketDAO.js           
-│   │   └── userDAO.js             
+
+│   │   ├── cartDAO.js
+
+│   │   ├── productDAO.js  
+
+│   │   ├── ticketDAO.js   
+
+│   │   └── userDAO.js  
+
 │   ├── dtos/
-│   │   ├── cartDTO.js             
-│   │   ├── productDTO.js          
-│   │   ├── ticketDTO.js           
-│   │   └── userDTO.js             
+
+│   │   ├── cartDTO.js    
+
+│   │   ├── productDTO.js   
+
+│   │   ├── ticketDTO.js 
+
+│   │   └── userDTO.js  
+
 │   ├── middlewares/
-│   │   ├── authMiddleware.js      
-│   │   ├── errorHandler.js        
-│   │   └── roleMiddleware.js      
+
+│   │   ├── authMiddleware.js   
+
+│   │   ├── errorHandler.js     
+
+│   │   └── roleMiddleware.js 
+
 │   ├── models/
-│   │   ├── Cart.js                
-│   │   ├── Product.js             
-│   │   ├── Ticket.js              
-│   │   └── User.js                
+
+│   │   ├── Cart.js   
+
+│   │   ├── Product.js   
+
+│   │   ├── Ticket.js    
+
+│   │   └── User.js   
+
 │   ├── repositories/
-│   │   ├── cartRepository.js      
+
+│   │   ├── cartRepository.js 
+
 │   │   ├── productRepository.js   
+
 │   │   ├── ticketRepository.js    
-│   │   └── userRepository.js      
+
+│   │   └── userRepository.js    
+
 │   ├── routes/
-│   │   ├── authRoutes.js          
-│   │   ├── cartRoutes.js          
-│   │   ├── productRoutes.js       
-│   │   ├── ticketRoutes.js        
-│   │   └── userRoutes.js          
+
+│   │   ├── authRoutes.js        
+
+│   │   ├── cartRoutes.js     
+
+│   │   ├── productRoutes.js
+
+│   │   ├── ticketRoutes.js    
+
+│   │   └── userRoutes.js    
+
 │   ├── services/
-│   │   └── ticketService.js       
+
+│   │   └── ticketService.js   
+
 │   ├── views/
+
 │   │   ├── layouts/
-│   │   │   └── main.handlebars    
-│   │   ├── home.handlebars        
-│   │   ├── login.handlebars       
+
+│   │   │   └── main.handlebars  
+
+│   │   ├── home.handlebars     
+
+│   │   ├── login.handlebars      
+
 │   │   ├── protected.handlebars   
+
 │   │   ├── realTimeProducts.handlebars 
-│   │   └── register.handlebars   
-│   ├── .env                       
-│   └── app.js                     
+
+│   │   └── register.handlebars  
+
+│   ├── .env           
+
+│   └── app.js 
+
 ├── .gitignore
+
 ├── package-lock.json
+
 ├── package.json
+
 └── README.md
 
 🎯 Objetivo:
