@@ -8,63 +8,8 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 ## 📁 Estructura del Proyecto
 
-📦 BackendenIIEntregaFinal-main
-┣ 📂 node_modules
-┣ 📂 src
-┃ ┣ 📂 config
-┃ ┃ ┗ 📜 passport.js
-┃ ┣ 📂 controllers
-┃ ┃ ┣ 📜 authController.js
-┃ ┃ ┣ 📜 cartController.js
-┃ ┃ ┣ 📜 productController.js
-┃ ┃ ┣ 📜 ticketController.js
-┃ ┃ ┗ 📜 userController.js
-┃ ┣ 📂 daos
-┃ ┃ ┣ 📜 cartDAO.js
-┃ ┃ ┣ 📜 productDAO.js
-┃ ┃ ┣ 📜 ticketDAO.js
-┃ ┃ ┗ 📜 userDAO.js
-┃ ┣ 📂 dtos
-┃ ┃ ┣ 📜 cartDTO.js
-┃ ┃ ┣ 📜 productDTO.js
-┃ ┃ ┣ 📜 ticketDTO.js
-┃ ┃ ┗ 📜 userDTO.js
-┃ ┣ 📂 middlewares
-┃ ┃ ┣ 📜 authMiddleware.js
-┃ ┃ ┣ 📜 errorHandler.js
-┃ ┃ ┗ 📜 roleMiddleware.js
-┃ ┣ 📂 models
-┃ ┃ ┣ 📜 Cart.js
-┃ ┃ ┣ 📜 Product.js
-┃ ┃ ┣ 📜 Ticket.js
-┃ ┃ ┗ 📜 User.js
-┃ ┣ 📂 repositories
-┃ ┃ ┣ 📜 cartRepository.js
-┃ ┃ ┣ 📜 productRepository.js
-┃ ┃ ┣ 📜 ticketRepository.js
-┃ ┃ ┗ 📜 userRepository.js
-┃ ┣ 📂 routes
-┃ ┃ ┣ 📜 authRoutes.js
-┃ ┃ ┣ 📜 cartRoutes.js
-┃ ┃ ┣ 📜 productRoutes.js
-┃ ┃ ┣ 📜 sessions.router.js
-┃ ┃ ┣ 📜 ticketRoutes.js
-┃ ┃ ┗ 📜 userRoutes.js
-┃ ┣ 📂 services
-┃ ┃ ┗ 📜 ticketService.js
-┃ ┣ 📂 views
-┃ ┃ ┣ 📂 layouts
-┃ ┃ ┃ ┗ 📜 main.handlebars
-┃ ┃ ┣ 📜 home.handlebars
-┃ ┃ ┣ 📜 login.handlebars
-┃ ┃ ┣ 📜 register.handlebars
-┃ ┃ ┣ 📜 protected.handlebars
-┃ ┃ ┗ 📜 realTimeProducts.handlebars
-┃ ┣ 📜 .env
-┃ ┗ 📜 app.js
-┣ 📜 package.json
-┣ 📜 package-lock.json
-┗ 📜 README.md
+<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770" />
+<img width="255" height="421" alt="image" src="https://github.com/user-attachments/assets/3f64889e-076b-4b58-ad7f-696d9073d5bb" />
 
 
 ---
