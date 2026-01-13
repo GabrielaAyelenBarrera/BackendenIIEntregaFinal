@@ -8,64 +8,63 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 ## 📁 Estructura del Proyecto
 
-📦BackendenIIEntregaFinal-main (1)
- ┗ 📂BackendenIIEntregaFinal-main
- ┃ ┣ 📂node_modules
- ┃ ┣ 📂src
- ┃ ┃ ┣ 📂config
- ┃ ┃ ┃ ┗ 📜passport.js
- ┃ ┃ ┣ 📂controllers
- ┃ ┃ ┃ ┣ 📜authController.js
- ┃ ┃ ┃ ┣ 📜cartController.js
- ┃ ┃ ┃ ┣ 📜productController.js
- ┃ ┃ ┃ ┣ 📜ticketController.js
- ┃ ┃ ┃ ┗ 📜userController.js
- ┃ ┃ ┣ 📂daos
- ┃ ┃ ┃ ┣ 📜cartDAO.js
- ┃ ┃ ┃ ┣ 📜productDAO.js
- ┃ ┃ ┃ ┣ 📜ticketDAO.js
- ┃ ┃ ┃ ┗ 📜userDAO.js
- ┃ ┃ ┣ 📂dtos
- ┃ ┃ ┃ ┣ 📜cartDTO.js
- ┃ ┃ ┃ ┣ 📜productDTO.js
- ┃ ┃ ┃ ┣ 📜ticketDTO.js
- ┃ ┃ ┃ ┗ 📜userDTO.js
- ┃ ┃ ┣ 📂middlewares
- ┃ ┃ ┃ ┣ 📜authMiddleware.js
- ┃ ┃ ┃ ┣ 📜errorHandler.js
- ┃ ┃ ┃ ┗ 📜roleMiddleware.js
- ┃ ┃ ┣ 📂models
- ┃ ┃ ┃ ┣ 📜Cart.js
- ┃ ┃ ┃ ┣ 📜Product.js
- ┃ ┃ ┃ ┣ 📜Ticket.js
- ┃ ┃ ┃ ┗ 📜User.js
- ┃ ┃ ┣ 📂repositories
- ┃ ┃ ┃ ┣ 📜cartRepository.js
- ┃ ┃ ┃ ┣ 📜productRepository.js
- ┃ ┃ ┃ ┣ 📜ticketRepository.js
- ┃ ┃ ┃ ┗ 📜userRepository.js
- ┃ ┃ ┣ 📂routes
- ┃ ┃ ┃ ┣ 📜authRoutes.js
- ┃ ┃ ┃ ┣ 📜cartRoutes.js
- ┃ ┃ ┃ ┣ 📜productRoutes.js
- ┃ ┃ ┃ ┣ 📜sessions.router.js
- ┃ ┃ ┃ ┣ 📜ticketRoutes.js
- ┃ ┃ ┃ ┗ 📜userRoutes.js
- ┃ ┃ ┣ 📂services
- ┃ ┃ ┃ ┗ 📜ticketService.js
- ┃ ┃ ┣ 📂views
- ┃ ┃ ┃ ┣ 📂layouts
- ┃ ┃ ┃ ┃ ┗ 📜main.handlebars
- ┃ ┃ ┃ ┣ 📜home.handlebars
- ┃ ┃ ┃ ┣ 📜login.handlebars
- ┃ ┃ ┃ ┣ 📜protected.handlebars
- ┃ ┃ ┃ ┣ 📜realTimeProducts.handlebars
- ┃ ┃ ┃ ┗ 📜register.handlebars
- ┃ ┃ ┣ 📜.env
- ┃ ┃ ┗ 📜app.js
- ┃ ┣ 📜package-lock.json
- ┃ ┣ 📜package.json
- ┃ ┗ 📜README.md
+📦 BackendenIIEntregaFinal-main
+┣ 📂 node_modules
+┣ 📂 src
+┃ ┣ 📂 config
+┃ ┃ ┗ 📜 passport.js
+┃ ┣ 📂 controllers
+┃ ┃ ┣ 📜 authController.js
+┃ ┃ ┣ 📜 cartController.js
+┃ ┃ ┣ 📜 productController.js
+┃ ┃ ┣ 📜 ticketController.js
+┃ ┃ ┗ 📜 userController.js
+┃ ┣ 📂 daos
+┃ ┃ ┣ 📜 cartDAO.js
+┃ ┃ ┣ 📜 productDAO.js
+┃ ┃ ┣ 📜 ticketDAO.js
+┃ ┃ ┗ 📜 userDAO.js
+┃ ┣ 📂 dtos
+┃ ┃ ┣ 📜 cartDTO.js
+┃ ┃ ┣ 📜 productDTO.js
+┃ ┃ ┣ 📜 ticketDTO.js
+┃ ┃ ┗ 📜 userDTO.js
+┃ ┣ 📂 middlewares
+┃ ┃ ┣ 📜 authMiddleware.js
+┃ ┃ ┣ 📜 errorHandler.js
+┃ ┃ ┗ 📜 roleMiddleware.js
+┃ ┣ 📂 models
+┃ ┃ ┣ 📜 Cart.js
+┃ ┃ ┣ 📜 Product.js
+┃ ┃ ┣ 📜 Ticket.js
+┃ ┃ ┗ 📜 User.js
+┃ ┣ 📂 repositories
+┃ ┃ ┣ 📜 cartRepository.js
+┃ ┃ ┣ 📜 productRepository.js
+┃ ┃ ┣ 📜 ticketRepository.js
+┃ ┃ ┗ 📜 userRepository.js
+┃ ┣ 📂 routes
+┃ ┃ ┣ 📜 authRoutes.js
+┃ ┃ ┣ 📜 cartRoutes.js
+┃ ┃ ┣ 📜 productRoutes.js
+┃ ┃ ┣ 📜 sessions.router.js
+┃ ┃ ┣ 📜 ticketRoutes.js
+┃ ┃ ┗ 📜 userRoutes.js
+┃ ┣ 📂 services
+┃ ┃ ┗ 📜 ticketService.js
+┃ ┣ 📂 views
+┃ ┃ ┣ 📂 layouts
+┃ ┃ ┃ ┗ 📜 main.handlebars
+┃ ┃ ┣ 📜 home.handlebars
+┃ ┃ ┣ 📜 login.handlebars
+┃ ┃ ┣ 📜 register.handlebars
+┃ ┃ ┣ 📜 protected.handlebars
+┃ ┃ ┗ 📜 realTimeProducts.handlebars
+┃ ┣ 📜 .env
+┃ ┗ 📜 app.js
+┣ 📜 package.json
+┣ 📜 package-lock.json
+┗ 📜 README.md
 
 
 ---
