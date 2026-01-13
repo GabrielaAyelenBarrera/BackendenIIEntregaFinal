@@ -8,7 +8,8 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 ## 📁 Estructura del Proyecto
 
-<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770" />
+<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770" 
+  
 <img width="255" height="421" alt="image" src="https://github.com/user-attachments/assets/3f64889e-076b-4b58-ad7f-696d9073d5bb" />
 
 
@@ -73,20 +74,21 @@ Construir un **backend modular, mantenible y escalable** para un eCommerce, perm
 ### 1️⃣ Instalar dependencias
 ```bash
 npm install
----
+```
 ### 2️⃣ Variables de entorno
 Crear un archivo .env dentro de src:
+
 ```bash
 MONGO_URI=mongodb+srv://gbarrera:coderhouse@cluster0.eetr1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 PORT=8080
 JWT_SECRET=clave_secreta
----
+```
 ### 3️⃣ Iniciar el servidor
 ```bash
 node ./src/app.js
 Servidor disponible en:
 http://localhost:8080
----
+```
 ### 🔐 Rutas Principales
 - **/login** Registro de usuario
 - **/protected** Ruta protegida (requiere autenticación)
