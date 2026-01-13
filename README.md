@@ -1,4 +1,4 @@
-# 🚀 Entrega Final – Backend II
+# Ecommerce Backend API (Node.js, JWT & MongoDB)
 
 Este proyecto implementa un **backend robusto y escalable para un sistema de comercio electrónico**, desarrollado con **Node.js y Express**, aplicando buenas prácticas de arquitectura y organización del código.
 
@@ -8,8 +8,8 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 ## 📁 Estructura del Proyecto
 
-<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770" 
-  
+<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770"  />
+
 <img width="255" height="421" alt="image" src="https://github.com/user-attachments/assets/3f64889e-076b-4b58-ad7f-696d9073d5bb" />
 
 
@@ -98,12 +98,23 @@ http://localhost:8080
 ---
 
 ### ✅ Estado del Proyecto
+
 ✔️ Autenticación con JWT
+
 ✔️ Rutas protegidas
+
 ✔️ CRUD completo
+
 ✔️ Arquitectura modular
+
 ✔️ Productos en tiempo real
 
 ---
 
+## 👩‍💻 Autora
+**Gabriela Ayelén Barrera**  
+📫 Contacto: gabrielaayelenbarrera1145@gmail.com  
+🔗 LinkedIn: www.linkedin.com/in/gabrielabarrera-
+
+---
 
