@@ -85,8 +85,9 @@ JWT_SECRET=clave_secreta
 ### 3️⃣ Iniciar el servidor
 ```bash
 node ./src/app.js
+```
 Servidor disponible en:
-http://localhost:8080
+👉 **[http://localhost:8080](http://localhost:8080)**
 ```
 ### 🔐 Rutas Principales
 - **/login** Registro de usuario
