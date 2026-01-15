@@ -88,7 +88,7 @@ node ./src/app.js
 ```
 Servidor disponible en:
 👉 **[http://localhost:8080](http://localhost:8080)**
-```
+
 ### 🔐 Rutas Principales
 - **/login** Registro de usuario
 - **/protected** Ruta protegida (requiere autenticación)
