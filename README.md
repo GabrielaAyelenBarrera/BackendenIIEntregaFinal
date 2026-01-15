@@ -8,9 +8,8 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 ## 📁 Estructura del Proyecto
 
-<img width="229" height="768" alt="image" src="https://github.com/user-attachments/assets/a27733ba-1640-4ef7-9e82-b57d83155770"  />
+<img width="374" height="795" alt="image" src="https://github.com/user-attachments/assets/e6bc4176-0bd2-4c33-83c5-60a7baf0613d" />
 
-<img width="255" height="421" alt="image" src="https://github.com/user-attachments/assets/3f64889e-076b-4b58-ad7f-696d9073d5bb" />
 
 ---
 
