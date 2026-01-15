@@ -12,8 +12,8 @@ El objetivo es gestionar **productos, carritos, usuarios y tickets**, incorporan
 
 <img width="255" height="421" alt="image" src="https://github.com/user-attachments/assets/3f64889e-076b-4b58-ad7f-696d9073d5bb" />
 
-
 ---
+
 
 ## 🎯 Objetivo del Proyecto
 
